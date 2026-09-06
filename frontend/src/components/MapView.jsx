@@ -73,19 +73,11 @@ export default function MapView({
         scrollWheelZoom={true}
         className="w-full h-full z-10"
       >
-        {/* CartoDB Dark Matter base tiles for operations center look */}
+        {/* Clean, high-resolution Topographic Terrain base tiles (Zero API Key, Zero Watermark) */}
         <TileLayer
-          attribution='&copy; <a href="https://carto.com/">CARTO</a> | OpenStreetMap'
-          url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+          attribution='&copy; <a href="https://www.esri.com/">Esri</a>, USGS, NOAA'
+          url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}"
           maxZoom={18}
-        />
-
-        {/* Elevation contour / Topo overlay */}
-        <TileLayer
-          attribution='&copy; OpenTopoMap'
-          url="https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png"
-          opacity={0.35}
-          maxZoom={15}
         />
 
         {/* NH-10 Highway Polyline */}
