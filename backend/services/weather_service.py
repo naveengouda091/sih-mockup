@@ -68,7 +68,7 @@ def fetch_sikkim_weather(lat: float = 27.33, lon: float = 88.61):
 
         # Update cache for offline resilience
         try:
-            with open(CACHE_FILE, "w", encoding="utf-8") as f:
+            with open(CACHE_FILE, "w", encoding="utf-8-sig") as f:
                 json.dump(result, f, indent=2)
         except Exception:
             pass
@@ -83,7 +83,7 @@ def load_cached_weather(reason: str = "Network unavailable"):
     Fallback loader returning the verified local cache with full transparency.
     """
     try:
-        with open(CACHE_FILE, "r", encoding="utf-8") as f:
+        with open(CACHE_FILE, "r", encoding="utf-8-sig") as f:
             cached_data = json.load(f)
         
         cached_data["is_fallback"] = True
