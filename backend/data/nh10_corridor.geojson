@@ -1,0 +1,60 @@
+﻿{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "nh10-main",
+        "name": "National Highway 10 (Sevoke - Gangtok)",
+        "type": "Primary Arterial Highway",
+        "length_km": 114,
+        "criticality": "Lifeline Corridor to Sikkim",
+        "elevation_range_m": "150m - 1650m"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [88.4735, 26.8833],
+          [88.4520, 26.9050],
+          [88.4333, 26.9333],
+          [88.4210, 26.9850],
+          [88.4280, 27.0250],
+          [88.4333, 27.0667],
+          [88.4550, 27.0910],
+          [88.4833, 27.1333],
+          [88.5120, 27.1550],
+          [88.5280, 27.1770],
+          [88.5150, 27.2050],
+          [88.4980, 27.2340],
+          [88.5350, 27.2650],
+          [88.5830, 27.2980],
+          [88.6138, 27.3389]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "nh10-bypass-lava",
+        "name": "Alternate Mountain Ridge Bypass (Damdim - Lava - Algarah - Pakyong)",
+        "type": "Secondary Mountain Bypass",
+        "length_km": 142,
+        "criticality": "Emergency Evacuation Corridor",
+        "elevation_range_m": "200m - 2150m"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [88.4735, 26.8833],
+          [88.6200, 26.8900],
+          [88.7000, 26.9500],
+          [88.6600, 27.0850],
+          [88.5850, 27.1100],
+          [88.6100, 27.1800],
+          [88.5900, 27.2400],
+          [88.6138, 27.3389]
+        ]
+      }
+    }
+  ]
+}

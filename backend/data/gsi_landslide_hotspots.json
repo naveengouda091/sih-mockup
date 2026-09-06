@@ -1,0 +1,80 @@
+﻿[
+  {
+    "id": "GSI-SKM-01",
+    "name": "29th Mile Landslide Zone",
+    "location": "Near Teesta Bazaar, NH-10",
+    "coordinates": [88.4333, 27.0667],
+    "elevation_m": 220,
+    "slope_deg": 48.5,
+    "lithology": "Daling Group (Chlorite-Sericite Phyllite & Slate)",
+    "failure_type": "Debris Slide & Rock Fall",
+    "historical_triggers": "Heavy rain > 90mm/24h or Teesta River toe erosion",
+    "gsi_susceptibility": "Very High",
+    "vulnerability_score": 0.92
+  },
+  {
+    "id": "GSI-SKM-02",
+    "name": "Likhu Bhir Landslide Zone",
+    "location": "KM 42, Between Melli & Rangpo",
+    "coordinates": [88.4833, 27.1333],
+    "elevation_m": 310,
+    "slope_deg": 52.0,
+    "lithology": "Highly Weathered Quartzite & Gneissic bands",
+    "failure_type": "Wedge Failure & Rockfall",
+    "historical_triggers": "Rapid pore-water pressure spike after prolonged 5-day rain",
+    "gsi_susceptibility": "Very High",
+    "vulnerability_score": 0.89
+  },
+  {
+    "id": "GSI-SKM-03",
+    "name": "Seti Jhora Landslide Zone",
+    "location": "Sevoke - Teesta Stretch, NH-10",
+    "coordinates": [88.4333, 26.9333],
+    "elevation_m": 185,
+    "slope_deg": 44.0,
+    "lithology": "Siwalik Sandstone & Siltstone with shearing",
+    "failure_type": "Translational Debris Slide",
+    "historical_triggers": "Intense cloudburst > 120mm in catchment",
+    "gsi_susceptibility": "High",
+    "vulnerability_score": 0.84
+  },
+  {
+    "id": "GSI-SKM-04",
+    "name": "Tarkhola B1 Landslide Zone",
+    "location": "Between Teesta and Melli",
+    "coordinates": [88.4550, 27.0910],
+    "elevation_m": 260,
+    "slope_deg": 41.0,
+    "lithology": "Gondwana Coal-bearing Sandstone & Shale",
+    "failure_type": "Rotational Slump",
+    "historical_triggers": "Toe cutting by highway road widening",
+    "gsi_susceptibility": "Moderate to High",
+    "vulnerability_score": 0.76
+  },
+  {
+    "id": "GSI-SKM-05",
+    "name": "Rangpo Chota Singtam Basin",
+    "location": "Sikkim Ingress Border, Rangpo",
+    "coordinates": [88.5280, 27.1770],
+    "elevation_m": 340,
+    "slope_deg": 35.0,
+    "lithology": "River Terrace Alluvium overlying Phyllite",
+    "failure_type": "Mudflow & Colluvial Slip",
+    "historical_triggers": "River inundation + saturation > 85%",
+    "gsi_susceptibility": "Moderate",
+    "vulnerability_score": 0.65
+  },
+  {
+    "id": "GSI-SKM-06",
+    "name": "Ranipool 9th Mile Zone",
+    "location": "Ranipool - Gangtok approach",
+    "coordinates": [88.5830, 27.2980],
+    "elevation_m": 980,
+    "slope_deg": 39.0,
+    "lithology": "Biotite Schist with active seepage lines",
+    "failure_type": "Debris Flow & Subsidence",
+    "historical_triggers": "Continuous urban drainage infiltration + monsoon rain",
+    "gsi_susceptibility": "High",
+    "vulnerability_score": 0.79
+  }
+]

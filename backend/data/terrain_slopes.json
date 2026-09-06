@@ -1,0 +1,134 @@
+﻿[
+  {
+    "id": "SLOPE-01",
+    "name": "Teesta Gorge West Wall (29th Mile)",
+    "corridor_km": "KM 28 - KM 31",
+    "center": [88.4333, 27.0667],
+    "polygon": [
+      [88.425, 27.060],
+      [88.442, 27.060],
+      [88.445, 27.075],
+      [88.428, 27.075],
+      [88.425, 27.060]
+    ],
+    "dem_elevation_m": 420,
+    "slope_gradient_deg": 48.5,
+    "aspect_deg": 135,
+    "lithology_class": "Phyllite_Weak",
+    "soil_cohesion_kpa": 12.5,
+    "friction_angle_deg": 26.0,
+    "soil_depth_m": 2.8,
+    "insar_baseline_creep_mm_yr": 16.4,
+    "insar_coherence": 0.72
+  },
+  {
+    "id": "SLOPE-02",
+    "name": "Likhu Cliff Face (KM 42)",
+    "corridor_km": "KM 40 - KM 44",
+    "center": [88.4833, 27.1333],
+    "polygon": [
+      [88.475, 27.125],
+      [88.492, 27.125],
+      [88.495, 27.142],
+      [88.478, 27.142],
+      [88.475, 27.125]
+    ],
+    "dem_elevation_m": 580,
+    "slope_gradient_deg": 52.0,
+    "aspect_deg": 160,
+    "lithology_class": "Quartzite_Sheared",
+    "soil_cohesion_kpa": 9.8,
+    "friction_angle_deg": 29.5,
+    "soil_depth_m": 1.9,
+    "insar_baseline_creep_mm_yr": 21.8,
+    "insar_coherence": 0.68
+  },
+  {
+    "id": "SLOPE-03",
+    "name": "Seti Jhora Catchment Slope",
+    "corridor_km": "KM 12 - KM 15",
+    "center": [88.4333, 26.9333],
+    "polygon": [
+      [88.425, 26.925],
+      [88.442, 26.925],
+      [88.445, 26.942],
+      [88.428, 26.942],
+      [88.425, 26.925]
+    ],
+    "dem_elevation_m": 310,
+    "slope_gradient_deg": 44.0,
+    "aspect_deg": 190,
+    "lithology_class": "Siwalik_Sandstone",
+    "soil_cohesion_kpa": 14.0,
+    "friction_angle_deg": 28.0,
+    "soil_depth_m": 3.2,
+    "insar_baseline_creep_mm_yr": 12.1,
+    "insar_coherence": 0.61
+  },
+  {
+    "id": "SLOPE-04",
+    "name": "Melli Ridge Flank",
+    "corridor_km": "KM 34 - KM 37",
+    "center": [88.4550, 27.0910],
+    "polygon": [
+      [88.445, 27.082],
+      [88.465, 27.082],
+      [88.468, 27.100],
+      [88.448, 27.100],
+      [88.445, 27.082]
+    ],
+    "dem_elevation_m": 490,
+    "slope_gradient_deg": 38.0,
+    "aspect_deg": 110,
+    "lithology_class": "Gondwana_Sandstone",
+    "soil_cohesion_kpa": 18.2,
+    "friction_angle_deg": 31.0,
+    "soil_depth_m": 2.5,
+    "insar_baseline_creep_mm_yr": 8.4,
+    "insar_coherence": 0.74
+  },
+  {
+    "id": "SLOPE-05",
+    "name": "Singtam Hillside Cutting",
+    "corridor_km": "KM 78 - KM 82",
+    "center": [88.4980, 27.2340],
+    "polygon": [
+      [88.488, 27.225],
+      [88.508, 27.225],
+      [88.512, 27.242],
+      [88.492, 27.242],
+      [88.488, 27.225]
+    ],
+    "dem_elevation_m": 720,
+    "slope_gradient_deg": 34.0,
+    "aspect_deg": 85,
+    "lithology_class": "Phyllite_Terraced",
+    "soil_cohesion_kpa": 22.0,
+    "friction_angle_deg": 33.0,
+    "soil_depth_m": 3.0,
+    "insar_baseline_creep_mm_yr": 4.2,
+    "insar_coherence": 0.79
+  },
+  {
+    "id": "SLOPE-06",
+    "name": "Ranipool Urban Infiltration Slope",
+    "corridor_km": "KM 96 - KM 100",
+    "center": [88.5830, 27.2980],
+    "polygon": [
+      [88.572, 27.290],
+      [88.594, 27.290],
+      [88.598, 27.308],
+      [88.576, 27.308],
+      [88.572, 27.290]
+    ],
+    "dem_elevation_m": 1050,
+    "slope_gradient_deg": 39.5,
+    "aspect_deg": 140,
+    "lithology_class": "Schist_Weathered",
+    "soil_cohesion_kpa": 16.5,
+    "friction_angle_deg": 30.0,
+    "soil_depth_m": 2.7,
+    "insar_baseline_creep_mm_yr": 11.5,
+    "insar_coherence": 0.65
+  }
+]
