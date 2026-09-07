@@ -2,19 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { 
   Mountain, 
   CloudRain, 
-  Layers, 
   Radio, 
   Bell, 
   Globe,
-  Wind,
-  CloudSun,
-  Activity,
   LocateFixed
 } from 'lucide-react';
 
 import MapView from './components/MapView';
 import CloudburstSlider from './components/CloudburstSlider';
 import SlopeInspector from './components/SlopeInspector';
+import HotspotInspector from './components/HotspotInspector';
 import EvacuationRouter from './components/EvacuationRouter';
 import AlertModal from './components/AlertModal';
 import FallbackBadge from './components/FallbackBadge';
@@ -47,6 +44,7 @@ export default function App() {
   const [multilingualAlert, setMultilingualAlert] = useState(null);
   const [capXml, setCapXml] = useState("");
   const [selectedSlope, setSelectedSlope] = useState(null);
+  const [selectedHotspot, setSelectedHotspot] = useState(null);
   const [selectedRoute, setSelectedRoute] = useState("safe");
   const [isAlertOpen, setIsAlertOpen] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -85,6 +83,7 @@ export default function App() {
   // Handle region dropdown change
   const handleRegionChange = async (regionId) => {
     setSelectedRegionId(regionId);
+    setSelectedHotspot(null);
     const matchedRegion = regions.find(r => r.id === regionId);
 
     if (matchedRegion) {
@@ -112,21 +111,21 @@ export default function App() {
   };
 
   // Handle hotspot inspection on map
-  const handleSelectHotspot = async (hotspot) => {
+  const handleSelectHotspot = (hotspot, incomingWeather) => {
+    setSelectedHotspot(hotspot);
+    setSelectedSlope(null); // Switch drawer focus to hotspot
+
     const [lon, lat] = hotspot.coordinates;
     setMapCenter([lat, lon]);
-    setMapZoom(13);
 
-    try {
-      const wRes = await fetch(`${API_BASE}/api/weather/live?lat=${lat}&lon=${lon}`);
-      if (wRes.ok) {
-        const wData = await wRes.json();
-        wData.location_name = `${hotspot.name} (${hotspot.location})`;
-        setWeatherData(wData);
-      }
-    } catch (err) {
-      console.warn("Error fetching hotspot weather:", err);
+    if (incomingWeather) {
+      setWeatherData(incomingWeather);
     }
+  };
+
+  const handleSelectSlope = (slope) => {
+    setSelectedSlope(slope);
+    setSelectedHotspot(null); // Switch drawer focus to slope
   };
 
   const runSimulation = async (rainMm) => {
@@ -142,8 +141,6 @@ export default function App() {
         if (selectedSlope) {
           const updated = data.slopes.find(s => s.slope_id === selectedSlope.slope_id);
           if (updated) setSelectedSlope(updated);
-        } else if (data.slopes.length > 0) {
-          setSelectedSlope(data.slopes[0]);
         }
       }
 
@@ -233,7 +230,7 @@ export default function App() {
             hotspots={hotspots}
             corridorData={corridorData}
             selectedSlope={selectedSlope}
-            onSelectSlope={setSelectedSlope}
+            onSelectSlope={handleSelectSlope}
             onSelectHotspot={handleSelectHotspot}
             selectedRoute={selectedRoute}
             isSevered={redSlopeCount > 0}
@@ -313,11 +310,19 @@ export default function App() {
             isSimulating={loading}
           />
 
-          {/* Module 2: Geotechnical Slope Inspector */}
-          <SlopeInspector
-            slope={selectedSlope}
-            onClose={() => setSelectedSlope(null)}
-          />
+          {/* Module 2: Hotspot or Slope Inspector (Reactively switches based on selection) */}
+          {selectedHotspot ? (
+            <HotspotInspector
+              hotspot={selectedHotspot}
+              weatherData={weatherData}
+              onClose={() => setSelectedHotspot(null)}
+            />
+          ) : (
+            <SlopeInspector
+              slope={selectedSlope}
+              onClose={() => setSelectedSlope(null)}
+            />
+          )}
 
           {/* Module 3: Hazard-Aware Evacuation Router */}
           <EvacuationRouter
