@@ -1,4 +1,5 @@
 # GeoRakshak-NER: Geotechnical & Spatial Architecture
+> *Developed for Smart India Hackathon (SIH) 2026 — Problem Statement 25022 (PS-01)*
 
 ## 1. Study Area Coordinates
 - **Corridor:** NH-10 (Sevoke to Gangtok Lifeline)

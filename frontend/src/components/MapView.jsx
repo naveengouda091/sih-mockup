@@ -117,12 +117,14 @@ export default function MapView({
         {basemap === "satellite" && (
           <>
             <TileLayer
+              key="tile-esri-imagery"
               attribution='&copy; <a href="https://www.esri.com/">Esri</a>, Earthstar Geographics'
               url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
               maxZoom={19}
               maxNativeZoom={18}
             />
             <TileLayer
+              key="tile-esri-boundaries"
               url="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}"
               maxZoom={19}
               maxNativeZoom={12}
@@ -134,6 +136,7 @@ export default function MapView({
         {/* Basemap 2: High-Resolution Topographic Terrain (Clean Elevation Relief) */}
         {basemap === "topo" && (
           <TileLayer
+            key="tile-esri-topo"
             attribution='&copy; <a href="https://www.esri.com/">Esri</a>, USGS, NOAA'
             url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}"
             maxZoom={19}
@@ -144,6 +147,7 @@ export default function MapView({
         {/* Basemap 3: Tactical Dark Matter (Command Center Look) */}
         {basemap === "dark" && (
           <TileLayer
+            key="tile-carto-dark"
             attribution='&copy; <a href="https://carto.com/">CARTO</a>'
             url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
             subdomains="abcd"
