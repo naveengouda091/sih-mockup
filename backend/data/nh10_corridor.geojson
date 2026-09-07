@@ -1,14 +1,15 @@
-﻿{
+{
   "type": "FeatureCollection",
   "features": [
     {
       "type": "Feature",
       "properties": {
         "id": "nh10-main",
-        "name": "National Highway 10 (Sevoke - Gangtok)",
+        "name": "National Highway 10 / AH 10 (Sevoke - Gangtok)",
+        "corridor": "sikkim",
         "type": "Primary Arterial Highway",
         "length_km": 114,
-        "criticality": "Lifeline Corridor to Sikkim",
+        "criticality": "Lifeline Corridor to Sikkim (Asian Highway 10)",
         "elevation_range_m": "150m - 1650m"
       },
       "geometry": {
@@ -37,6 +38,7 @@
       "properties": {
         "id": "nh10-bypass-lava",
         "name": "Alternate Mountain Ridge Bypass (Damdim - Lava - Algarah - Pakyong)",
+        "corridor": "sikkim",
         "type": "Secondary Mountain Bypass",
         "length_km": 142,
         "criticality": "Emergency Evacuation Corridor",
@@ -53,6 +55,82 @@
           [88.6100, 27.1800],
           [88.5900, 27.2400],
           [88.6138, 27.3389]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "nh29-main",
+        "name": "National Highway 29 (Dimapur - Kohima)",
+        "corridor": "nagaland",
+        "type": "Primary Arterial Highway",
+        "length_km": 74,
+        "criticality": "Strategic Lifeline to Nagaland & Manipur",
+        "elevation_range_m": "195m - 1440m"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [93.7250, 25.9060],
+          [93.7650, 25.8600],
+          [93.8050, 25.8200],
+          [93.8180, 25.7920],
+          [93.8820, 25.7550],
+          [93.9450, 25.7300],
+          [94.0250, 25.7130],
+          [94.0720, 25.6920],
+          [94.1080, 25.6740]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "nh6-main",
+        "name": "National Highway 6 (Shillong - Silchar)",
+        "corridor": "meghalaya",
+        "type": "Primary Arterial Highway",
+        "length_km": 215,
+        "criticality": "Lifeline to Barak Valley, Mizoram & Tripura",
+        "elevation_range_m": "140m - 1520m"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [91.8830, 25.5788],
+          [92.0100, 25.5200],
+          [92.2150, 25.4490],
+          [92.3100, 25.4000],
+          [92.3610, 25.3540],
+          [92.3680, 25.1120],
+          [92.4820, 25.0130],
+          [92.6500, 24.9100],
+          [92.7980, 24.8330]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "nh2-main",
+        "name": "National Highway 2 (Kohima - Imphal)",
+        "corridor": "manipur",
+        "type": "Primary Arterial Highway",
+        "length_km": 138,
+        "criticality": "Manipur Lifeline Ingress",
+        "elevation_range_m": "780m - 1750m"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [94.1080, 25.6740],
+          [94.1200, 25.5100],
+          [94.1350, 25.4380],
+          [94.0200, 25.2670],
+          [93.9720, 25.1500],
+          [93.9450, 24.9600],
+          [93.9368, 24.8170]
         ]
       }
     }
